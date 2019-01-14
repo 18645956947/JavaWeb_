@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>登录成功</title>
 </head>
 <body>
-
+<h1>恭喜登录成功！</h1>
 </body>
 </html>
