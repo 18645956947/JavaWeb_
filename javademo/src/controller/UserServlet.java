@@ -1,7 +1,9 @@
 package controller;
 
 import java.io.IOException;
+import java.util.Map;
 
+import javax.security.auth.message.callback.PrivateKeyCallback.Request;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -25,6 +27,13 @@ public class UserServlet extends HttpServlet {
 		String userName = req.getParameter("username");
 		String password = req.getParameter("password");
 		
+		/*
+		 * Map<String, String[]>map = req.getParameterMap(); Iterable<T> iterable =
+		 * map.keySet(); while (iterable.hasNext()) { type type = (type)
+		 * iterable.next();
+		 * 
+		 * }
+		 */
 		User user = userService.loginUser(userName, password);
 		if (user != null) {
 			resp.sendRedirect("login_success.jsp");

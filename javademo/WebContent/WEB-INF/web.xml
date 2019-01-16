@@ -7,9 +7,29 @@
   <servlet>
     <servlet-name>UserServlet</servlet-name>
     <servlet-class>controller.UserServlet</servlet-class>
+    <!-- 在加载servlet时就先执行init()方法 -->
+    <load-on-startup>4</load-on-startup>
   </servlet>
   <servlet-mapping>
     <servlet-name>UserServlet</servlet-name>
-    <url-pattern>/</url-pattern>
+    <url-pattern>/UserServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+  <servlet-name>TextServlet</servlet-name>
+  <servlet-class>text.TextServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>TextServlet</servlet-name>
+    <url-pattern>/TextServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>DownServlet</servlet-name>
+  <servlet-class>com.download.DownServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>DownServlet</servlet-name>
+    <url-pattern>/DownServlet</url-pattern>
+  </servlet-mapping>
+  
 </web-app> 

@@ -41,7 +41,7 @@ public class JdbcUtil {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-	}
+	}  
  
 	// 单例模式返回数据库连接对�?
 	public static Connection getConnection() throws Exception {
