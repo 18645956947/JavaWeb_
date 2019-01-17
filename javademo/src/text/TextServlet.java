@@ -33,12 +33,21 @@ public class TextServlet extends HttpServlet {
 		 */
 		//指定浏览器的编码
 		//resp.setHeader("Content-Type", "text/html;chartset = UTF-8");
-		resp.setContentType("text/html;chartset = UTF-8");
-		resp.getOutputStream().write("你好".getBytes());
 		
-		String username = req.getParameter("username");
-		String password = req.getParameter("password");
-		System.out.println("username = " + username + "password = " + password);
+		resp.setContentType("text/html;chartset = UTF-8");
+		//resp.getOutputStream().write("你好".getBytes());
+		
+		String userName = req.getParameter("username");
+		String passWord = req.getParameter("password");
+		if("zhx".equals(userName)&&"123".equals(passWord)) {
+			//请求转发
+			req.getRequestDispatcher("login_success.jsp").forward(req, resp);;
+		}
+		else {
+			//重定向
+			resp.sendRedirect("login_failed.jsp");
+		}
+		System.out.println("username = " + userName + "password = " + passWord);
 	}
 }
  

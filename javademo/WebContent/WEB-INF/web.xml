@@ -32,4 +32,13 @@
     <url-pattern>/DownServlet</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+  <servlet-name>TextCookieServlet</servlet-name>
+  <servlet-class>text.TextCookieServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>TextCookieServlet</servlet-name>
+    <url-pattern>/TextCookieServlet</url-pattern>
+  </servlet-mapping>
+  
 </web-app> 
